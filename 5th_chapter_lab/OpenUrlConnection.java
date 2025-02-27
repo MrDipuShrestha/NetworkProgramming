@@ -6,6 +6,9 @@ public class OpenUrlConnection {
         URL url = uri.toURL();
         URLConnection connection = url.openConnection();
         System.out.println("Connection opened to: " + url);
-        System.out.println(connection);
+        connection.setRequestProperty("Accept", "text/html");
+        connection.setRequestProperty("Accept", "JSON/XML");
+        System.out.println("Content-Type: " + connection.getHeaderField("Content-Type"));
+        System.out.println("Content-Length: " + connection.getHeaderField("Content-Length"));
     }
 }
