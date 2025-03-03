@@ -15,7 +15,7 @@ public class CheckIfModified {
             long lastChecked = System.currentTimeMillis() - (24 * 60 * 60 * 1000); //24 HOURS AGO
 
             //Get the value set
-            System.out.println("If-Modified-Since; " + new Date(connection.getIfModifiedSince()));
+            System.out.println("If-Modified-Since: " + new Date(connection.getIfModifiedSince()));
 
             // Connect to the server
             connection.connect();
